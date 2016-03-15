@@ -1,3 +1,4 @@
 alex: melezhik@gmail.com
 bot: iamarobot@...
+foo: foo@bar
 
