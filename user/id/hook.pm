@@ -6,3 +6,17 @@ modify_resource(sub{
     $r;
 });
 
+
+if (http_method() eq uc('get') ){
+set_response_processor( sub { 
+
+	my $headers   = shift;
+	my $body      = shift;
+	use JSON;
+	$hash = decode_json($body);
+	return "$headers\n".("id: $hash->{id}\nemail: $hash->{email}\nage: $hash->{age}");
+	
+
+
+    });}
+            

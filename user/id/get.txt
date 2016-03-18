@@ -1,2 +1,6 @@
-id: foo email: foo@bar
+Content-Type: application/json
+
+id: foo 
+email: foo@bar
+
 
