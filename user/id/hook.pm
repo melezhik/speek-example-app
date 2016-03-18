@@ -20,3 +20,17 @@ set_response_processor( sub {
 
     });}
             
+
+if (http_method() eq uc('delete') ){
+set_response_processor( sub { 
+
+	my $headers   = shift;
+	my $body      = shift;
+	use JSON;
+	$hash = decode_json($body);
+	return "$headers\n".("id: $hash->{id}\nstatus: $hash->{status}\nmessage: $hash->{message}");
+	
+
+
+    });}
+            

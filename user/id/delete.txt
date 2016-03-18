@@ -1,2 +1,4 @@
-user foo deleted OK
+id: foo 
+message: user deleted OK
+status: OK
 

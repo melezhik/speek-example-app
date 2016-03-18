@@ -1,0 +1,6 @@
+my $headers   = shift;
+my $body      = shift;
+use JSON;
+$hash = decode_json($body);
+return "$headers\n".("id: $hash->{id}\nstatus: $hash->{status}\nmessage: $hash->{message}");
+
